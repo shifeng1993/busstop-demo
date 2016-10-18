@@ -1,0 +1,170 @@
+// 全局开始
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+#container{
+  min-height: 30vw;
+}
+@mixin tc ($align) {
+  text-align: center;
+}
+@mixin fl ($float) {
+  float: left;
+}
+@mixin dp ($display) {
+  display: inline-block;
+}
+$white: #fff;
+$green: #3e4103;
+$t: transparent;
+.add {
+  color: #ab8c09;
+}
+
+header {
+  margin-bottom: 1vw;
+  width: 100%;
+  height: 10vw;
+  // div {
+  //   @include fl(left);
+  // }
+  .route {
+    width: 25%;
+    height: 100%;
+    font-size: 9vw;
+    background: red;
+    line-height: 10vw;
+    color: $white;
+    @include tc(center);
+    @include dp(inline-block);
+  }
+  .busstop {
+    position: absolute;;
+@include dp(inline-block);
+    margin-top: 0;
+    padding: 1vw;
+    width: 73%;
+    line-height: 4vw;
+    height: 80%;
+    font-size: 3vw;
+    color: $green;
+    @include tc(center);
+    p {
+      font-size: 4vw;
+      line-height: 5vw;
+    }
+    i {
+      @include dp(inline-block);
+      width: 16%;
+      height: 0;
+      border: 0.2vw solid $green;
+      margin-bottom: 1vw;
+    }
+    b {
+      @include dp(inline-block);
+      width: 0;
+      height: 0;
+      border: 0.6vw solid $green;
+      border-top-color: $t;
+      border-right-color: $t;
+      margin-bottom: 1vw;
+    }
+  }
+}
+article {
+  width: 100%;
+  height: 15vw;
+  background: $green;
+  ul {
+    width: 92%;
+    height: 100%;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    li {
+      @include dp(inline-block);
+      width: 4%;
+      height: 93%;
+      @include fl(left);
+      color: $white;
+      padding: 1.2vw;
+      font-size: 2.5vw;
+      @include tc(center);
+      &:nth-child(1),
+      &:nth-child(10),
+      &:nth-child(12),
+      &:nth-child(3),
+      &:nth-child(6) {
+        line-height: 4vw;
+      }
+      &:nth-child(11),
+      &:nth-child(13),
+      &:nth-child(15),
+      &:nth-child(2),
+      &:nth-child(5),
+      &:nth-child(8),
+      &:nth-child(9) {
+        line-height: 3.2vw;
+      }
+      &:nth-child(4),
+      &:nth-child(7) {
+        line-height: 2.3vw;
+      }
+      &:nth-child(14) {
+        line-height: 2.7vw;
+      }
+    }
+  }
+}
+footer {
+  @include fl(left);
+  width: 100%;
+  height: 2.5vw;
+  margin-top: 1vw;
+  div {
+    @include fl(left);
+    margin-top: -1.2vw;
+  }
+  .left,
+  .right {
+    width: 45%;
+    height: 2.5vw;
+  }
+  .middle {
+    width: 10%;
+    height: 2.5vw;
+    color: $green;
+    @include tc(center);
+    font-size: 2.5vw;
+  }
+  .left {
+    b {
+      @include dp(inline-block);
+      width: 0;
+      height: 0;
+      border: 0.6vw solid $green;
+      border-top-color: $t;
+      border-left-color: $t;
+      margin-bottom: 1vw;
+      margin-left: 2vw;
+    }
+    i {
+      @include dp(inline-block);
+      width: 92%;
+      height: 0;
+      border: 0.2vw solid $green;
+      margin-bottom: 1vw;
+    }
+  }
+  .right {
+    i {
+      @include dp(inline-block);
+      width: 92%;
+      height: 0;
+      border: 0.2vw solid $green;
+      margin-bottom: 0.5vw;
+    }
+  }
+}
